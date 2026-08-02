@@ -1,7 +1,6 @@
 services:
   openclaw-gateway:
     image: ${OPENCLAW_IMAGE:-openclaw:local}
-    build: .
     env_file:
       - path: .env
         required: false
