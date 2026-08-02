@@ -1,6 +1,7 @@
 services:
   openclaw-gateway:
     image: ghcr.io/openclaw/openclaw:latest-browser
+    pull_policy: always
     env_file:
       - path: .env
         required: false
@@ -87,6 +88,7 @@ services:
 
   openclaw-cli:
     image: ghcr.io/openclaw/openclaw:latest-browser
+    pull_policy: always
     network_mode: "service:openclaw-gateway"
     env_file:
       - path: .env
