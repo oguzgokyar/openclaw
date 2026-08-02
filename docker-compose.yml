@@ -1,6 +1,6 @@
 services:
   openclaw-gateway:
-    image: ghcr.io/openclaw/openclaw:extended-stable-browser
+    image: ghcr.io/openclaw/openclaw:latest-browser
     env_file:
       - path: .env
         required: false
@@ -86,7 +86,7 @@ services:
       start_period: 20s
 
   openclaw-cli:
-    image: ghcr.io/openclaw/openclaw:extended-stable-browser
+    image: ghcr.io/openclaw/openclaw:latest-browser
     network_mode: "service:openclaw-gateway"
     env_file:
       - path: .env
